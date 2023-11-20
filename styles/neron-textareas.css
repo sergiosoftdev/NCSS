@@ -1,0 +1,26 @@
+/* Text Areas */
+
+.light-textarea{
+
+    border-radius: var(--section-border-radius);
+    background-color: var(--grey-main-color);
+    padding: calc(var(--default-padding) - 15px);
+    border: none;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+
+}
+
+.dark-textarea{
+
+    border-radius: var(--section-border-radius);
+    background-color: var(--important-color);
+    color: white;
+    padding: calc(var(--default-padding) - 15px);
+    border: none;
+    width: 100%;
+    resize: none;
+    box-sizing: border-box;
+
+}
