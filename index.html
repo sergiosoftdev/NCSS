@@ -8,7 +8,6 @@
   </head>
 
   <body>
-
     <header class="main-header">
       <div class="main-header-wrapper">
         <a href="">
@@ -126,11 +125,6 @@
           </div>
 
           <h1>Code Example</h1>
-
-          
-
-        <div class="editor"><div class="background"></div><div id="editor"></div></div>
-
         </section>
         <section class="default-section" id="lists">
           <h1 class="section-header">Lists</h1>
@@ -202,8 +196,8 @@
         </section>
         <section class="default-section" id="buttons">
           <h1 class="section-header">Buttons</h1>
-          <br>
-          <br>
+          <br />
+          <br />
 
           <form>
             <div class="grid-box">
@@ -271,48 +265,5 @@
         </section>
       </main>
     </div>
-
-    <script src="js/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        var editor = ace.edit("editor");
-        var initialCode = 
-`<body>
-  <div class="main-wrapper">
-    <main class="main-content-wrapper">
-      <section class="default-section">
-        <h1>Half Example</h1>
-        <div class="main-box">
-          <div class="half">Hello</div>
-          <div class="half">Hello</div>
-        </div>
-        <h1>Quarter Example</h1>
-        <div class="main-box">
-          <div class="quarter">Hello</div>
-          <div class="quarter">Hello</div>
-          <div class="quarter">Hello</div>
-          <div class="quarter">Hello</div>
-        </div>
-        
-        <h1>Important Example</h1>
-        <div class="main-box">
-          <div class="important">Hello</div>
-        </div>
-        <p>Hello, this is an example using Neron CSS (NCSS)</p>
-      </section>
-    </main>
-  </div>
-</body>`;
-        editor.setTheme("ace/theme/github_dark");
-        editor.session.setMode("ace/mode/html");
-        editor.setOptions({
-          fontFamily: "montserrat",
-          fontSize: "10pt"
-        });
-        editor.session.setUseWorker(false);
-        editor.setReadOnly(true);
-        editor.setShowPrintMargin(false);
-        editor.setValue(initialCode, -1)
-    </script>
-
   </body>
 </html>
