@@ -8,6 +8,7 @@
   </head>
 
   <body>
+
     <header class="main-header">
       <div class="main-header-wrapper">
         <a href="">
@@ -124,31 +125,12 @@
             <div class="error"></div>
           </div>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            natus numquam sequi enim soluta quas, possimus perferendis assumenda
-            magnam similique harum, modi qui eos? Mollitia esse rem vero
-            maiores. Saepe quae assumenda vitae porro. Ratione in vel quos sint
-            dolorem laboriosam magnam impedit magni sed expedita, illo
-            laudantium ipsam provident, veritatis numquam facere dolores fugit
-            id cupiditate non ducimus! Esse ipsam alias ut dolor quas aspernatur
-            vero facere maxime, est maiores praesentium omnis iusto id
-            consectetur obcaecati nihil eveniet itaque et, sed adipisci! Quidem,
-            alias explicabo! Harum libero doloribus, fuga nostrum molestiae,
-            assumenda iure, voluptas nobis quasi obcaecati tenetur in sequi
-            debitis. Harum odit corporis veritatis alias facilis natus
-            recusandae in amet numquam ea suscipit molestias eveniet nostrum
-            dolor reprehenderit excepturi, at totam quibusdam voluptas possimus
-            velit neque! Doloribus hic cupiditate dolorum, quidem, quae quo
-            consectetur soluta ipsam ut, quia corrupti optio. Quaerat iusto,
-            tempore officiis eligendi suscipit adipisci quam sequi ullam sint
-            impedit rerum eos deleniti ratione culpa optio commodi fugit
-            reiciendis voluptatem debitis obcaecati animi explicabo praesentium
-            cupiditate. Odio deleniti perspiciatis, porro magnam ipsa cumque
-            praesentium vel reiciendis, numquam eum facere delectus voluptate,
-            eaque accusantium. Natus amet cum perspiciatis, enim, temporibus
-            excepturi veniam at in voluptatem a dolore!
-          </p>
+          <h1>Code Example</h1>
+
+          
+
+        <div class="editor"><div class="background"></div><div id="editor"></div></div>
+
         </section>
         <section class="default-section" id="lists">
           <h1 class="section-header">Lists</h1>
@@ -289,5 +271,48 @@
         </section>
       </main>
     </div>
+
+    <script src="js/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        var editor = ace.edit("editor");
+        var initialCode = 
+`<body>
+  <div class="main-wrapper">
+    <main class="main-content-wrapper">
+      <section class="default-section">
+        <h1>Half Example</h1>
+        <div class="main-box">
+          <div class="half">Hello</div>
+          <div class="half">Hello</div>
+        </div>
+        <h1>Quarter Example</h1>
+        <div class="main-box">
+          <div class="quarter">Hello</div>
+          <div class="quarter">Hello</div>
+          <div class="quarter">Hello</div>
+          <div class="quarter">Hello</div>
+        </div>
+        
+        <h1>Important Example</h1>
+        <div class="main-box">
+          <div class="important">Hello</div>
+        </div>
+        <p>Hello, this is an example using Neron CSS (NCSS)</p>
+      </section>
+    </main>
+  </div>
+</body>`;
+        editor.setTheme("ace/theme/github_dark");
+        editor.session.setMode("ace/mode/html");
+        editor.setOptions({
+          fontFamily: "montserrat",
+          fontSize: "10pt"
+        });
+        editor.session.setUseWorker(false);
+        editor.setReadOnly(true);
+        editor.setShowPrintMargin(false);
+        editor.setValue(initialCode, -1)
+    </script>
+
   </body>
 </html>
